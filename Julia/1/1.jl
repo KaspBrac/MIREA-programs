@@ -1,6 +1,6 @@
 using HorizonSideRobots
 
-function mark_cross!(r::Robot)#задача 1
+function mark_cross!(r::Robot) #главная функция. +-ой крест
     for side in (Nord, Sud, West, Ost)
         n_steps = putmarkers_until_border!(r, side)
         moves!(r, inverse_side(side), n_steps)
@@ -9,7 +9,7 @@ function mark_cross!(r::Robot)#задача 1
 end
 
 
-function putmarkers_until_border!(r::Robot, side::HorizonSide)::Int
+function putmarkers_until_border!(r::Robot, side::HorizonSide)::Int #ставит маркеры до тех пор, пока не встретит преграду
     n_steps = 0
     while !isborder(r, side) 
         move!(r, side)
@@ -19,7 +19,7 @@ function putmarkers_until_border!(r::Robot, side::HorizonSide)::Int
     return n_steps
 end
 
-function inverse_side(side::HorizonSide)::HorizonSide
+function inverse_side(side::HorizonSide)::HorizonSide #инверсирует стороны света
     inv_side = HorizonSide((Int(side) + 2) % 4)
     return inv_side
 end
