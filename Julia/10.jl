@@ -1,6 +1,6 @@
 using HorizonSideRobots
 
-function mark_square!(r::Robot, n::Int)
+function mark_square!(r::Robot, n::Int) #расставление в шахматном порядке
     
     counter1 = 1
     counter2 = 1
