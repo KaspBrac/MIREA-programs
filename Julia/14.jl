@@ -1,4 +1,4 @@
-function try_move!(robot, side)
+function try_move!(robot, side) #расставление маркеров в шахматном порядке с внутренними перегородками
     if isborder(robot, side)
         return false
     else 
