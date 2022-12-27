@@ -1,6 +1,6 @@
 using HorizonSideRobots
 
-function find_marker!(r::Robot)
+function find_marker!(r::Robot)#нахождение маркера
     tmp = (side::HorizonSide) -> ismarker(r)
     spiral!( tmp, r)
 end
