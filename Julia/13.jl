@@ -1,6 +1,6 @@
-using HorizonSideRobots
+using HorizonSideRobots 
 
-function task13!(robot)
+function task13!(robot) #расставление маркеров в шахматном порядке
     numSud,numWest=tocorner!(robot)
     snake!(robot, (Ost,Nord))
     tocorner!(robot)
@@ -8,13 +8,13 @@ function task13!(robot)
     firstplace!(robot,Ost,numWest)
 end
 
-function firstplace!(robot,side,num_steps)
+function firstplace!(robot,side,num_steps) #первый шаг
     for _ in 1:num_steps
         move!(robot,side)
     end
 end
 
-function tocorner!(robot)
+function tocorner!(robot) #движение в угол
     numvert=0
     numhori=0
     while !isborder(robot,West) || !isborder(robot,Sud)
