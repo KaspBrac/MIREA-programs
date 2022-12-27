@@ -1,6 +1,6 @@
 
 
-function double_dist!(robot, side, n)
+function double_dist!(robot, side, n) #перемещение на удвоенное расстояние
     if !isborder(robot, side)
         move!(robot, side)
         double_dist!(robot, side, n+1)
@@ -26,7 +26,7 @@ function double_dist!(robot, side, n)
     end
 end
 
-inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4)
+inverse(side::HorizonSide) = HorizonSide((Int(side) +2)% 4) #инверсирование
 
 robot = Robot("pole.sit", animate = true)
 side = readline()
