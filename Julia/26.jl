@@ -1,4 +1,5 @@
-function get_fibbonachi(n::Int)::Int
+#а
+function get_fibbonachi(n::Int)::Int #возвращение n-ного члена последовательности без рекурсии
     if n == 1 || n == 2
         return 1
     end
@@ -15,7 +16,7 @@ end
 
 #б
 
-function get_fibbonachi_rec(n::Int)::Int
+function get_fibbonachi_rec(n::Int)::Int #c рекурсией
     if n == 1 || n == 2
         return 1
     end
