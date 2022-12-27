@@ -1,7 +1,7 @@
 using HorizonSideRobots
 # Never delete first line
 
-function cross_move(robot, side_x, side_y)
+function cross_move(robot, side_x, side_y)#косой крест
     num_step = 0
     while !isborder(robot, side_x) && !isborder(robot, side_y)
         move!(robot, side_x)
