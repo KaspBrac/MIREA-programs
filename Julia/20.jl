@@ -1,4 +1,4 @@
-function get_on_through_rec!(r::Robot, side::HorizonSide, n_steps::Int = 0)
+function get_on_through_rec!(r::Robot, side::HorizonSide, n_steps::Int = 0) #перемещение робота в соседнюю клетку
     if isborder(r, side)
         move!(r, next_side(side))
         n_steps += 1
