@@ -1,5 +1,5 @@
 using HorizonSideRobots
-function mark_evr(robot) 
+function mark_evr(robot) #закрашивание всей площади
     tW = 0 
     tS = 0
     for side in (Sud, West)
